@@ -1,13 +1,42 @@
-.main-component {
-  height: 100vh;
-  background-color: cornflowerblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+  height: 70vh;
+  position: relative;
+  background: url("../../assets/geli-bg.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
-.main-component p {
-  color: gold;
-  font-size: 30px;
-  font-weight: 500;
+header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 2;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.title-text {
+  text-align: center;
+}
+
+.title-text h1 {
+  font-weight: bold;
+  font-size: 68px;
+  font-family: 'Exo', sans-serif;
+  line-height: 1.25;
+}
+
+.title-text p {
+  font-size: 1.14286rem;
+  font-family: 'Exo', sans-serif;
 }

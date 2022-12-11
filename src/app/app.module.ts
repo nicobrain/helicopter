@@ -8,13 +8,15 @@ import { MainComponent } from './main/main.component';
 import { HelicoptersComponent } from './helicopters/helicopters.component';
 import { SightseeingFlightsComponent } from './sightseeing-flights/sightseeing-flights.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
+import { BusinessFlightsComponent } from './business-flights/business-flights.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     HelicoptersComponent,
-    SightseeingFlightsComponent
+    SightseeingFlightsComponent,
+    BusinessFlightsComponent
   ],
   imports: [
     BrowserModule,
