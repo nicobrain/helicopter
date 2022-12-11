@@ -1,11 +1,20 @@
+.plug {
+  height: 70px;
+}
+
 .header {
   font-family: 'Rubik', sans-serif;
   box-shadow: 0 4px 8px rgb(0 0 0 / 6%);
   background-color: #ffffff;
-  height: 100px
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
-.header-nav{
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,9 +39,14 @@
   margin-right: 0;
 }
 
-.logo {
-  color: #1d9fd9;
+.logo a {
+  color: #1d9fd9 !important;
   font-size: 20px;
+  transition: 0.3s all;
+}
+
+.logo a:hover {
+  color: #353535 !important;
 }
 
 .logo h6 {
@@ -40,12 +54,182 @@
 }
 
 .btn-order {
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
   font-size: 13px;
-  padding: 12px 30px;
+  //padding: 12px 30px;
   border: 1px solid black;
   border-radius: 3px;
   font-weight: 500;
   transition: 0.5s;
+}
+
+.btn-order:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FOOTER STYLE
+
+
+.forms {
+  position: relative;
+  background: url("../assets/gelicopter-bg-2.jpeg") center no-repeat;
+  background-size: cover;
+  color: white;
+  -webkit-background-size: cover;
+}
+
+.forms:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(57, 59, 61, .95);
+  z-index: 2;
+}
+
+.container-fluid {
+  padding: 66px 45px;
+  position: relative;
+  z-index: 3;
+}
+
+.title-form {
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 0 !important;
+  padding: 0;
+  font-family:'rubik', sans-serif;
+}
+
+.cost-estimation {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.28571rem;
+  padding: 0;
+}
+
+.cost-estimation:after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #45B3E4;
+  width: 166px;
+  height: 3px;
+}
+form {
+
+}
+
+input {
+  background-color: #5A5B5C;
+  color: white;
+  border-color: #5A5B5C;
+  border-radius: 4px;
+  padding: 15px 57px;
+}
+
+.form-input + .form-input {
+  margin-left: 10px;
+}
+
+.form-input:first-child {
+  margin-left: 0;
+}
+
+
+input::placeholder {
+  color: #cccccc;
+}
+
+.two-inputs {
+  margin-bottom: 20px;
+}
+
+hr {
+  margin-bottom: 35px;
+}
+
+.check-pay {
+  font-size: 16px;
+}
+
+.card-check {
+  margin-right: 15px;
+  font-size: 16px;
+  padding: 15px 20px;
+  border: 1px solid #9299A2;
+}
+
+.card-check {
+  cursor: pointer;
+}
+
+#card-check, #whats-app, #telegram, #email-2, #number-2, #bitcoin-check {
+  background-color: #1d9fd9;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+#last-check {
+  margin-right: 7px;
+  width: 16px;
+  height: 16px;
+}
+
+.send-form-btn {
+  padding: 17px 120px;
+  color: white;
+  transition: 0.3s all;
+  font-size: 18px;
+  background-color: #45B3E4;
+  border: 0 solid #45B3E4;
+  border-radius: 3px;
+}
+
+.send-form-btn:hover, .btn-order:hover {
+  transform: translateY(-6px);
+}
+
+.partners-line {
+  height: 123px;
+  background-color: #444444;
+}
+
+.title-partner {
+  font-size: 25px;
+  color: white;
+  font-weight: 500;
+}
+
+.title-partner p {
+  margin-bottom: 0 !important;
+  margin-left: 45px;
+}
+
+.img-partners {
+  width: 115px !important;
+  filter: grayscale(100%) invert(1);
 }
 
 
@@ -102,8 +286,7 @@
 //
 //STROKE
 
-#mainNav.stroke ul li a
-{
+#mainNav.stroke ul li a {
   position: relative;
 }
 
@@ -120,6 +303,7 @@
   background: black;
   height: 1px;
 }
+
 #mainNav.stroke ul li a:hover:after {
   width: 100%;
 }
@@ -134,10 +318,12 @@
   margin: 0;
   opacity: 0;
 }
+
 #mainNav ul li a:hover {
   color: #E34F25;
   z-index: 1;
 }
+
 #mainNav ul li a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
@@ -146,26 +332,30 @@
 
 #mainNav ul {
   list-style: none;
-  margin:0;
+  margin: 0;
 
 }
+
 #mainNav ul li {
   display: inline-block;
-  display:inline;
+  display: inline;
   margin: 20px;
 }
+
 #mainNav ul li a {
   padding-bottom: 10px;
   text-decoration: none;
-  color:#fff;
+  color: #fff;
 }
+
 #mainNav ul li a,
 #mainNav ul li a:after,
 #mainNav ul li a:before {
   transition: all .5s;
 }
+
 #mainNav ul li a:hover {
-  color:#E34F25;
+  color: #E34F25;
 }
 
 

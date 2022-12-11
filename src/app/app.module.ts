@@ -6,17 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { HelicoptersComponent } from './helicopters/helicopters.component';
+import { SightseeingFlightsComponent } from './sightseeing-flights/sightseeing-flights.component';
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HelicoptersComponent
+    HelicoptersComponent,
+    SightseeingFlightsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

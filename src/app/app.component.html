@@ -4,21 +4,180 @@
     <div class="header-nav">
 
       <div class="logo">
-        <h6>ВЕРТОЛЕТНОЕ ТАКСИ</h6>
+        <h6><a [routerLink]="['/']">ВЕРТОЛЕТНОЕ ТАКСИ</a></h6>
       </div>
 
       <div class="nav stroke" id="mainNav">
         <ul class="nav-link">
-          <li><a href="">ВЕРТОЛЕТЫ</a></li>
-          <li><a href="">ДЕЛОВЫЕ ПОЛЕТЫ</a></li>
-          <li><a href="">ОБЗОРНЫЕ ПОЛЕТЫ</a></li>
+          <li><a routerLink="/helicopter">ВЕРТОЛЕТЫ</a></li>
+          <li><a routerLink="/">ДЕЛОВЫЕ ПОЛЕТЫ</a></li>
+          <li><a routerLink="/sightseeing">ОБЗОРНЫЕ ПОЛЕТЫ</a></li>
         </ul>
       </div>
 
-      <div class="order">
+      <div class="order d-flex">
         <button class="btn btn-default btn-order">ЗАЯВКА НА ПОЛЕТ</button>
       </div>
     </div>
 
   </div>
 </div>
+<div class="plug"></div>
+<router-outlet></router-outlet>
+
+<div class="footer">
+  <div class="forms">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="title-form">
+          <p>Форма заявки</p>
+        </div>
+        <div class="cost-estimation mb-5">
+          <p>Расчет стоимости</p>
+        </div>
+
+
+        <form>
+          <div class="one-inputs d-flex justify-content-center">
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Дата вылета" type="email" class="form-control" id="date"
+                     aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Время вылета" class="form-control" id="time-start">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Модель вертолета" type="text" class="form-control" id="name-heli">
+            </div>
+          </div>
+
+          <div class="two-inputs d-flex justify-content-center">
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Место вылета" type="email" class="form-control" id="place-start"
+                     aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Место прилета" type="text" class="form-control" id="place-end">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Количество пасажиров" type="text" class="form-control" id="count">
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="three-inputs d-flex justify-content-center">
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="ФИО" type="email" class="form-control" id="full-name"
+                     aria-describedby="emailHelp">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Место прилета" class="form-control" id="number">
+            </div>
+
+            <div class="form-input mb-3 col-lg-4">
+              <input placeholder="Электронная почта" type="text" class="form-control" id="email">
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="check-box d-flex">
+
+            <div class="box-1 col-lg-6">
+
+              <div class="check-pay">
+                <p>СПОСОБ ОПЛАТЫ</p>
+              </div>
+
+              <div class="card-and-bitcoin d-flex">
+
+                <label for="card-check" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="card-check" type="checkbox"> <div>Картой на сайте</div>
+                </label>
+
+                <label for="bitcoin-check" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="bitcoin-check" type="checkbox"> <div>Bitcoin</div>
+                </label>
+
+              </div>
+            </div>
+
+            <div class="box-2 col-lg-6">
+
+              <div class="check-pay">
+                <p>УДОБНЫЙ ФОРМАТ СВЯЗИ</p>
+              </div>
+
+              <div class="card-and-bitcoin d-flex">
+
+                <label for="number-2" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="number-2" type="checkbox"> <div>Телефон</div>
+                </label>
+
+                <label for="email-2" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="email-2" type="checkbox"> <div>Email</div>
+                </label>
+
+                <label for="telegram" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="telegram" type="checkbox"> <div>Telegram</div>
+                </label>
+
+                <label for="whats-app" class="card-check d-flex justify-content-center align-items-center">
+                  <input id="whats-app" type="checkbox"> <div>WhatsApp</div>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <hr>
+
+          <div class="send-form mt-5 d-flex justify-content-between align-items-center">
+            <label for="last-check" class=" last-check d-flex justify-content-start align-items-center">
+              <input id="last-check" type="checkbox"> <div>Согласен на обработку персональных данных</div>
+            </label>
+
+            <button class="send-form-btn">Отправить</button>
+
+
+          </div>
+
+
+
+
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="partners-line d-flex justify-content-between align-items-center">
+    <div class="title-partner">
+      <p>КЛИЕНТЫ И ПАРТНЕРЫ</p>
+    </div>
+    <div class="owl col-lg-8">
+      <owl-carousel-o class="" [options]="customOptions">
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/1.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/2.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/4.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/5.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/6.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/7.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/9.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/10.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/11.png" alt=""></ng-template>
+        <ng-template carouselSlide><img class="img-partners" src="assets/partners-img/12.png" alt=""></ng-template>
+      </owl-carousel-o>
+    </div>
+
+  </div>
+</div>
+
+
