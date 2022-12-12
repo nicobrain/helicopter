@@ -10,6 +10,7 @@ import { SightseeingFlightsComponent } from './sightseeing-flights/sightseeing-f
 import {CarouselModule} from "ngx-owl-carousel-o";
 import { BusinessFlightsComponent } from './business-flights/business-flights.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { BusinessFlightsComponent } from './business-flights/business-flights.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
